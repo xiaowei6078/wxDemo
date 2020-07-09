@@ -1,9 +1,9 @@
-<view class="radios-list" wx:for="{{ flex }}" wx:for-item="flexAttr" wx:key="index">
-	<view class="radio-tit">{{ index + 1 }}、{{ flexAttr.title }}</view>
+<view class="radios-list" wx:for="{{ flex }}" wx:for-index="key" wx:for-item="flexAttr" wx:key="key">
+	<view class="radio-tit">{{ key }}、{{ flexAttr.title }}</view>
 	<view>
         <!-- radio 组 -->
-		<radio-group>
-            <block wx:for="{{ flexAttr.children }}" wx:for-item="item" wx:key="item.value">
+		<radio-group bindchange="attrChange" data-key="{{ key }}">
+            <block wx:for="{{ flexAttr.children }}" wx:for-index="ind" wx:for-item="item" wx:key="ind">
                 <!-- 单个radio -->
                 <view class="radio-item">
                     <label>

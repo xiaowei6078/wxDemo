@@ -63,7 +63,7 @@
 .container {
   height: 1000rpx;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-end;
