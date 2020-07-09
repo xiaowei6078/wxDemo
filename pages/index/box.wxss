@@ -1,0 +1,4 @@
+.box{
+  text-align: center;
+  line-height: 200rpx;
+}

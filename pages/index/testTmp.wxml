@@ -1,0 +1,13 @@
+<!-- 模板文件 -->
+<template name="testTmp"> 
+  <view>
+    <text>{{item.index}}: {{item.msg}}</text>
+    <text>Time: {{item.time}}</text>
+  </view>
+</template>
+<template name="testTmp2"> 
+  <view>
+    <text>{{index}}: {{msg}}</text>
+    <text>Time: {{time}}</text>
+  </view>
+</template>

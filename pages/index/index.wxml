@@ -1,0 +1,58 @@
+<text>{{ motto }}</text>
+
+<block wx:for="{{ arrForObj }}" wx:for-index="ind" wx:for-item="obj" wx:key="id">
+  <view>
+    {{obj.id}}: {{obj.name}}
+    {{ind}}
+  </view>
+</block>
+<view wx:for="{{ arr }}" wx:for-index="ind" wx:for-item="num" wx:key="ind">
+  {{ind}}: {{num}}
+</view>
+<!-- 模板引用 -->
+<import src="./testTmp.wxml"/>
+<template is="testTmp" data="{{item}}" />
+<template is="testTmp2" data="{{...item2}}" />
+
+<include src="./header.wxml" />
+<view>body</view>
+<include src="./footer.wxml" />
+
+
+<view>{{msg}}</view>
+<view class="box">
+  box
+</view>
+
+<button bindtap="goTestPage">跳转至test页面</button>
+
+<!-- <view
+  id="outer"
+  bind:touchstart="handleTap1"
+  capture-bind:touchstart="handleTap2"
+>
+  outer view
+  <view
+    id="inner"
+    bind:touchstart="handleTap3"
+    capture-bind:touchstart="handleTap4"
+  >
+    inner view
+  </view>
+</view> -->
+
+<view
+  id="outer"
+  bind:touchstart="handleTap1"
+  capture-catch:touchstart="handleTap2"
+>
+  outer view
+  <view
+    id="inner"
+    bind:touchstart="handleTap3"
+    capture-bind:touchstart="handleTap4"
+  >
+    inner view
+  </view>
+</view>
+<button bind:tap="goFlexDemo">flexDemo</button>

@@ -1,0 +1,25 @@
+<view class="radios-list" wx:for="{{ flex }}" wx:for-item="flexAttr" wx:key="index">
+	<view class="radio-tit">{{ index + 1 }}、{{ flexAttr.title }}</view>
+	<view>
+        <!-- radio 组 -->
+		<radio-group>
+            <block wx:for="{{ flexAttr.children }}" wx:for-item="item" wx:key="item.value">
+                <!-- 单个radio -->
+                <view class="radio-item">
+                    <label>
+                        <radio class="radio-elm" value="{{ item.value }}" checked="{{ item.checked }}"></radio>
+                        <text class="lab-txt">{{ item.name }}</text>
+                    </label>
+                </view>
+            </block>
+		</radio-group>
+	</view>
+</view>
+<view class="container" style="{{ containerStyle }}">
+	<view style="background-color:coral;">A</view>
+	<view style="background-color:lightblue;">B</view>
+	<view style="background-color:khaki;">C</view>
+	<view style="background-color:pink;">D</view>
+	<view style="background-color:lightgrey;">E</view>
+	<view style="background-color:lightgreen;">F</view>
+</view>

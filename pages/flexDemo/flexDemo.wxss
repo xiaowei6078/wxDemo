@@ -1,0 +1,77 @@
+.radios-list{
+  font-size: 24rpx;
+}
+.radio-tit{
+  color: rgb(17, 17, 24);
+  padding: 10rpx 10rpx 20rpx;
+  font-size: 26rpx;
+  font-weight: 400;
+}
+.radio-item{
+  padding: 10rpx;
+}
+.radio-elm{
+  transform:scale(0.7)
+}
+.lab-txt{
+  vertical-align: middle;
+}
+/* 
+ * flex-direction： 规定灵活项目的方向
+ *
+ * column: 竖向排列 
+ * column-reverse：竖向排列（元素以相反的顺序）
+ * row: 横向排列 --- 元素不自动换行
+ * row-reverse：横向排列（元素以相反的顺序） 
+ * initial: 默认值
+ * inherit：从父元素继承该属性
+ */
+
+ /* 
+ * justify-content： 用于设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式
+ *
+ * flex-start: 默认值，项目位于容器的开头
+ * flex-end：项目位于容器的结尾
+ * center: 项目位于容器的中心
+ * space-between：项目位于各行之间留有空白的容器内
+ * space-around: 项目位于各行之前、之间、之后都留有空白的容器内 
+ * initial: 默认值
+ * inherit：从父元素继承该属性
+ */
+
+ /* 
+ * flex-wrap： 规定flex容器是单行或者多行，同时横轴的方向决定了新行堆叠的方向
+ *
+ * nowrap: 默认值，规定灵活的项目不拆行或不拆列
+ * wrap：规定灵活的项目在必要的时候拆行或拆列
+ * wrap-reverse: 规定灵活的项目在必要的时候拆行或拆列，但是以相反的顺序
+ * initial: 默认值
+ * inherit：从父元素继承该属性
+ */
+
+ /* 
+ * align-items： 定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式
+ *
+ * stretch: 默认值，元素被拉伸以适应容器
+ * center：元素位于容器的中心
+ * flex-start: 元素位于容器的开头
+ * flex-end: 元素位于容器的结尾
+ * baseline: 元素位于容器的基线上
+ * initial: 默认值
+ * inherit：从父元素继承该属性
+ */
+.container {
+  height: 1000rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: #ccc;
+}
+
+.container view {
+  display: inline-block;
+	width: 40px;
+	height: 40px;
+}

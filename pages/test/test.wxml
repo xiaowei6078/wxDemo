@@ -1,0 +1,5 @@
+<map></map>
+<view>Hello {{name}}</view>
+<button bindtap="changeName"> Click me! </button>
+<button bindtap="getRunData"> 获取运动数据 </button>
+<button bindtap="back">返回</button>
